@@ -149,25 +149,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f5f5f5;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
-        .payment-container {
+
+        .payment-box {
             background-color: #fff;
-            padding: 30px 40px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             text-align: center;
-            width: 300px;
+            width: 320px;
         }
+
         h2 {
             color: #333;
             margin-bottom: 20px;
         }
+
         .payment-button {
             display: block;
             width: 100%;
@@ -176,16 +179,19 @@
             font-size: 16px;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             transition: 0.3s;
         }
+
         .bKash { background-color: #e60000; }
         .nagad { background-color: #ff6600; }
         .rocket { background-color: #0066cc; }
+
         .payment-button:hover {
             opacity: 0.8;
         }
+
         .note {
             margin-top: 20px;
             font-size: 14px;
@@ -194,7 +200,7 @@
     </style>
 </head>
 <body>
-    <div class="payment-container">
+    <div class="payment-box">
         <h2>পেমেন্ট সিস্টেম</h2>
         <button class="payment-button bKash">বিকাশ</button>
         <button class="payment-button nagad">নগদ</button>
