@@ -12,65 +12,67 @@
       text-align: center;
     }
 
-    .login-btn {
-      background: linear-gradient(to right, #ff4b2b, #7b2fff);
-      border: none;
-      color: white;
-      padding: 12px 35px;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    .login-btn:hover {
-      opacity: 0.9;
-    }
-
-    .work-section {
+    .work-box {
       background: #101031;
       border-radius: 10px;
-      padding: 20px;
-      margin: 40px auto;
       width: 85%;
       max-width: 400px;
-      text-align: left;
+      margin: 80px auto;
+      padding: 20px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
-    .work-section h2 {
+    .work-title {
       background: #0044ff;
       color: white;
-      padding: 8px 15px;
+      padding: 10px;
       border-radius: 6px;
       font-size: 18px;
-      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .work-section ul {
+    .work-title:hover {
+      background: #0033cc;
+    }
+
+    .work-list {
+      display: none;
       margin-top: 15px;
+      text-align: left;
       line-height: 1.8;
       font-size: 16px;
+      padding-left: 20px;
     }
 
-    .work-section ul li {
+    .work-list li {
       list-style: square;
     }
   </style>
 </head>
 <body>
-  <h3>পাসওয়ার্ড দিন</h3>
-  <button class="login-btn">Login</button>
 
-  <div class="work-section">
-    <h2>আমাদের কাজ</h2>
-    <ul>
+  <div class="work-box">
+    <div class="work-title" onclick="toggleWork()">আমাদের কাজ</div>
+    <ul class="work-list" id="workList">
       <li>Telegram Account Creating</li>
       <li>WhatsApp Account Creating</li>
       <li>Gmail Account Creating</li>
-      <li>Refer System</li>
       <li>Daily Task (Like, Follow, Subscribe)</li>
+      <li>Refer System</li>
     </ul>
   </div>
+
+  <script>
+    function toggleWork() {
+      var list = document.getElementById("workList");
+      if (list.style.display === "none" || list.style.display === "") {
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>
